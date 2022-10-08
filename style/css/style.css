@@ -14,28 +14,20 @@
 }
 
 .btn {
-  padding: 1em 2.5em;
+  padding: 1rem 2.5rem;
   background: #ffe033;
   font-weight: 600;
   font-size: 1em;
   margin: 0.5em;
 }
-.btn img {
-  margin: -5px 0px;
-}
 
 .btn-outline {
   padding: 1em 2.5em;
   font-weight: 600;
-  font-size: 1em;
   border: 1px solid #ffe033;
 }
 .btn-outline:hover {
   background: #ffe033;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 .icon-bars {
@@ -43,117 +35,36 @@ body {
 }
 
 header {
-  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 1.5em;
+  margin: auto;
+  overflow: hidden;
 }
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-header nav ul a {
+header nav ul li {
+  border-left: 1px solid #BFBFBF;
+  margin: 0em 0.5em;
+  padding: 0em 1em;
+}
+header nav ul li a:hover {
+  font-weight: 600;
   font-size: 1.1em;
-  border-left: 2px solid #000;
-  padding: 0rem 0.5rem;
-}
-header nav ul a:hover {
-  font-weight: 800;
+  border-bottom: 2px solid #ffe033;
 }
 
-@media screen and (max-width: 1212px) {
-  header {
-    font-size: 80%;
-  }
-
-  body {
-    font-size: 70%;
-  }
-}
-@media screen and (max-width: 890px) {
-  header {
-    font-size: 70%;
-  }
-}
-@media screen and (max-width: 860px) {
-  .icon-bars {
-    display: block;
-    cursor: pointer;
-  }
-
-  header {
-    font-size: 100%;
-    padding: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: hidden;
-  }
-  header .logo img {
-    width: 100px;
-    height: auto;
-  }
-  header .nav-none ul {
-    position: absolute;
-    top: 100px;
-    bottom: 0%;
-    left: 0%;
-    width: 0%;
-    height: 0vh;
-    opacity: 0;
-    background-color: #fffffd;
-    display: block;
-    z-index: 99;
-    text-align: center;
-  }
-  header .nav-none ul li {
-    margin-top: 1rem;
-  }
-  header .nav-none ul a {
-    font-size: 1.1em;
-    border-left: 0px solid #000;
-    padding: 1rem;
-  }
-  header .nav-none ul a:hover {
-    font-weight: 800;
-  }
-  header .nav-block ul {
-    position: absolute;
-    top: 100px;
-    left: 0px;
-    opacity: 1;
-    z-index: 99;
-    width: 100%;
-    height: 100vh;
-    display: block;
-    background-color: #dcd9cb;
-    text-align: center;
-  }
-  header .nav-block ul li {
-    margin-top: 2rem;
-  }
-  header .nav-block ul a {
-    font-size: 1.1em;
-    border-left: 0px solid #000;
-    padding: 1rem;
-  }
-  header .nav-block ul a:hover {
-    font-weight: 800;
-  }
-}
 .all-imges {
   position: relative;
 }
@@ -195,7 +106,6 @@ header nav ul a:hover {
 }
 
 .section-one {
-  position: relative;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
@@ -316,7 +226,64 @@ header nav ul a:hover {
   margin: 0em 2em;
 }
 
+@media screen and (max-width: 1212px) {
+  header {
+    font-size: 80%;
+  }
+
+  body {
+    font-size: 70%;
+  }
+}
+@media screen and (max-width: 890px) {
+  header {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 854px) {
+  header {
+    font-size: 100%;
+    width: 100%;
+  }
+  header .nav-none {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 100rem;
+    background-color: #e7dede;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+  }
+  header .nav-none ul li {
+    width: 100%;
+    border-left: 0px solid #BFBFBF;
+    margin: 1.5em 0em;
+  }
+  header .nav-block {
+    width: 100%;
+    margin-top: 200px;
+  }
+  header .nav-block ul {
+    display: block;
+  }
+  header .nav-block ul li {
+    width: 100%;
+    border-left: 0px solid #BFBFBF;
+    margin: 1.5em 0em;
+  }
+
+  .icon-bars {
+    display: block;
+    cursor: pointer;
+  }
+}
 @media screen and (max-width: 775px) {
+  header .logo img {
+    width: 100px;
+    height: auto;
+  }
+
   .article {
     display: -ms-grid;
     display: grid;
